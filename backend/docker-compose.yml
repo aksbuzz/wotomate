@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: workflow_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "8080:8080"
+
+  redis:
+    image: redis:8.0.1
+    container_name: reddis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  pgdata:
+    external: true
+    name: 72744717984ae5a6f9f57851ade1037d094f8fbc529aab3942eefe6fe112ffa3
+
+  redis-data:
+    external: true
+    name: d834a80b07556af2773cade6ab102707a5018a1d180890792fc9ac205c025f76

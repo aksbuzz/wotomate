@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Connection Successful</title>
+    <script>
+        window.onload = function() {
+            if (window.opener) {
+                // Send a message to the window that opened this popup
+                window.opener.postMessage({
+                    type: 'oauthSuccess',
+                    service: 'github',
+                    message: 'GitHub account connected successfully!',
+                    connectionDetails: {{ connection_details | tojson | safe }}
+                }, '*'); // Be more specific with targetOrigin in production
+                window.close(); // Close the popup
+            } else {
+                // Fallback if not opened as a popup
+                document.body.innerHTML = "<h1>GitHub connection successful! You can now close this tab.</h1>";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Connecting to GitHub...</p>
+</body>
+</html>

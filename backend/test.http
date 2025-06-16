@@ -1,0 +1,134 @@
+POST http://localhost:5000/api/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "first@gmail.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "first@gmail.com",
+  "password": "123456"
+}
+
+
+###
+
+GET http://localhost:5000/api/auth/me HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+
+###
+
+GET http://localhost:5000/api/connection/github/initiate HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+
+###
+
+GET http://localhost:5000/api/connection/trello/initiate HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+
+###
+
+GET http://localhost:5000/api/connectors/status/github HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+
+###
+
+GET http://localhost:5000/api/connectors HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+
+###
+
+GET http://localhost:5000/api/connectors/definitions HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://localhost:5000/api/connectors/definitions/github/triggers HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://localhost:5000/api/connectors/definitions/slack/actions HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+POST http://localhost:5000/api/workflows HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+Content-Type: application/json
+
+{
+  "name": "Notify Slack on New GitHub Issue"
+}
+
+###
+
+GET http://localhost:5000/api/workflows HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODk2Mjc3NiwianRpIjoiYTBkZTlhODktYmE4OS00MWNmLThmODYtMDAxODVlMjI1MjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg5NjI3NzYsImNzcmYiOiJhNzIzZDgzZC0xMmE3LTRkNmItYmQ3ZS1mMThjNWQyZTIwZWMifQ.SWWxt30tiYiyFLrGBFn1I3I1KTz32U17TVDvAfWxFaA
+Content-Type: application/json
+
+###
+
+GET http://localhost:5000/api/workflows/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0OTAxODcwMSwianRpIjoiNmFkODZmZGEtNTc5MS00MWI3LWJlYmMtYTdlOTc4ZTczYzg0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDkwMTg3MDEsImNzcmYiOiIwYmU2MzA3Yi05ZjIxLTRjYjMtYWJmOS0yYWI5M2YwMGY3OTMifQ.aWHZb0s3Rp4KMo74a9jam2ViHZrPD_kSmpYqIc_Q37I
+Content-Type: application/json
+
+###
+
+PUT http://localhost:5000/api/workflows/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0OTAxODcwMSwianRpIjoiNmFkODZmZGEtNTc5MS00MWI3LWJlYmMtYTdlOTc4ZTczYzg0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDkwMTg3MDEsImNzcmYiOiIwYmU2MzA3Yi05ZjIxLTRjYjMtYWJmOS0yYWI5M2YwMGY3OTMifQ.aWHZb0s3Rp4KMo74a9jam2ViHZrPD_kSmpYqIc_Q37I
+Content-Type: application/json
+
+{
+  "name": "Create Trello card on New GitHub Issue"
+}
+
+###
+
+PUT http://localhost:5000/api/workflows/1/trigger HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0OTAxODcwMSwianRpIjoiNmFkODZmZGEtNTc5MS00MWI3LWJlYmMtYTdlOTc4ZTczYzg0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDkwMTg3MDEsImNzcmYiOiIwYmU2MzA3Yi05ZjIxLTRjYjMtYWJmOS0yYWI5M2YwMGY3OTMifQ.aWHZb0s3Rp4KMo74a9jam2ViHZrPD_kSmpYqIc_Q37I
+
+{
+  "trigger_definition_id": 1,
+  "config": {
+    "repository_name": "interview_prep",
+    "repository_owner": "aksbuzz"
+  },
+  "connector_id": 1
+}
+
+###
+
+POST http://localhost:5000/api/workflows/1/actions HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0OTAxODcwMSwianRpIjoiNmFkODZmZGEtNTc5MS00MWI3LWJlYmMtYTdlOTc4ZTczYzg0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDkwMTg3MDEsImNzcmYiOiIwYmU2MzA3Yi05ZjIxLTRjYjMtYWJmOS0yYWI5M2YwMGY3OTMifQ.aWHZb0s3Rp4KMo74a9jam2ViHZrPD_kSmpYqIc_Q37I
+
+{
+  "actions": [
+    {
+      "action_definition_id": 3,
+      "config": {
+        "idList": "68403d506f0ed40da180f986",
+        "name": "{{ trigger.output.title }}",
+        "desc": "{{ trigger.output.body }} \n\n url: {{ trigger.output.url }}",
+        "pos": "top",
+        "due": "2025-06-10T13:54:00.000Z"
+      },
+      "position": 0,
+      "connector_id": 3
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+function EditorAddTriggerNode() {}
+
+export { EditorAddTriggerNode };
