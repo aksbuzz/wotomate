@@ -23,9 +23,6 @@ function WorkflowEditor() {
   return (
     <>
       <EditorHeader name={name} onNameChange={e => setName(e.target.value)} />
-        {
-          !defaultState.trigger && 
-        }
     </>
   );
 }
