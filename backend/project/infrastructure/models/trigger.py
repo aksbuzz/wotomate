@@ -1,6 +1,5 @@
 from project import db
 from datetime import datetime, timedelta
-from .trigger_definition import TriggerDefinition
 
 
 class Trigger(db.Model):
